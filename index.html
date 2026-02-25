@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nandan KL | GOD MODE 3D Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial}
+html,body{height:100%;scroll-behavior:smooth}
+body{background:#000;color:#fff;overflow-x:hidden}
+canvas{position:fixed;top:0;left:0;z-index:-1}
+
+section{
+  min-height:100vh;
+  padding:120px 12%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.glass{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(22px);
+  border-radius:30px;
+  padding:50px;
+  box-shadow:0 60px 150px rgba(0,0,0,.85);
+}
+
+h1{
+  font-size:5rem;
+  background:linear-gradient(90deg,#00f2fe,#4facfe);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+h2{
+  font-size:3.2rem;
+  margin-bottom:25px;
+  background:linear-gradient(90deg,#43e97b,#38f9d7);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+p,li{color:#ccc;line-height:1.9}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:35px;
+}
+
+.card{
+  background:rgba(255,255,255,.06);
+  border-radius:26px;
+  padding:35px;
+  transform-style:preserve-3d;
+  transition:.6s;
+}
+.card:hover{
+  transform:translateY(-25px) rotateX(12deg) rotateY(12deg);
+}
+
+.bar{height:10px;background:#222;border-radius:10px;overflow:hidden}
+.bar span{
+  display:block;height:100%;
+  background:linear-gradient(90deg,#00f2fe,#4facfe)
+}
+
+footer{
+  text-align:center;
+  padding:50px;
+  color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<!-- HERO -->
+<section>
+<div class="glass">
+<h1>NANDAN KL</h1>
+<h3>Computer Science Engineer</h3>
+<p>
+Motivated Computer Science graduate with hands-on experience in full-stack and web application development,
+seeking an entry-level Software Engineer role to contribute effectively.
+</p>
+<p>📧 nandancse4@gmail.com<br>📞 +91 8197449930</p>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+<h2>Education</h2>
+<div class="grid">
+<div class="card">
+<h3>Alva’s Institute of Engineering and Technology</h3>
+<p>Bachelor of Engineering in Computer Science</p>
+<p>2021 – 2025 | CGPA: 7.6</p>
+<p>Mangalore, Karnataka</p>
+</div>
+
+<div class="card">
+<h3>Alva’s PU College</h3>
+<p>Physics, Chemistry, Mathematics, Computer Science</p>
+<p>2019 – 2021 | Percentage: 86%</p>
+<p>Mangalore, Karnataka</p>
+</div>
+
+<div class="card">
+<h3>Alva’s Education Foundation</h3>
+<p>Secondary School Leaving Certificate</p>
+<p>2018 – 2019 | Percentage: 85%</p>
+<p>Mangalore, Karnataka</p>
+</div>
+</div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section>
+<h2>Internship Experience</h2>
+<div class="glass">
+<h3>Roman Technologies (Feb 2025 – April 2025)</h3>
+<p>Intern – Online</p>
+<ul>
+<li>Built UI components using HTML, CSS, and JavaScript</li>
+<li>Understood responsive design and frontend performance</li>
+<li>Learned Django framework and CRUD operations</li>
+</ul>
+
+<br>
+
+<h3>Dhee Coding Lab (Ongoing)</h3>
+<p>Full Stack Developer Trainee – Offline</p>
+<ul>
+<li>Training in Python, Django, MySQL, HTML, CSS, JavaScript, ReactJS</li>
+<li>Hands-on backend development and API integration</li>
+<li>Responsive UI design</li>
+</ul>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2>Technical Skills</h2>
+<div class="grid">
+<div class="card">
+<h3>Backend</h3>
+Python<div class="bar"><span style="width:85%"></span></div><br>
+MySQL<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+<div class="card">
+<h3>Framework</h3>
+Django<div class="bar"><span style="width:75%"></span></div>
+</div>
+
+<div class="card">
+<h3>Frontend</h3>
+HTML<div class="bar"><span style="width:90%"></span></div><br>
+CSS<div class="bar"><span style="width:85%"></span></div><br>
+JavaScript<div class="bar"><span style="width:80%"></span></div><br>
+React JS<div class="bar"><span style="width:70%"></span></div>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<h2>Projects</h2>
+<div class="grid">
+<div class="card">
+<h3>Weather Forecast Application (Feb 2024)</h3>
+<ul>
+<li>Fully responsive weather web application</li>
+<li>Real-time weather tracking using OpenWeather API</li>
+<li>Dynamic UI updates based on weather conditions</li>
+<li>fetch() API handling with validation and error handling</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>AI-Enabled Dynamic Tolling System (May 2025)</h3>
+<ul>
+<li>Dynamic toll pricing based on real-time traffic</li>
+<li>YOLO vehicle classification</li>
+<li>Tesseract OCR license plate recognition</li>
+<li>Automated and accurate toll collection</li>
+<li>Eco-friendly traffic optimization</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- EXTRACURRICULAR -->
+<section>
+<h2>Extracurricular Activities</h2>
+<div class="grid">
+<div class="card">
+<h3>UiPath Student Teaching Volunteer</h3>
+<p>Nov 2023 – Jan 2024</p>
+<p>Alva’s Institute of Engineering and Technology</p>
+</div>
+
+<div class="card">
+<h3>NSS (National Service Scheme) Volunteer</h3>
+<p>May 2022 – Dec 2025</p>
+<p>Alva’s Institute of Engineering and Technology</p>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 Nandan KL | GOD MODE PORTFOLIO
+</footer>
+
+<script>
+/* THREE.JS GOD MODE */
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(75,innerWidth/innerHeight,0.1,2000);
+const renderer=new THREE.WebGLRenderer({canvas:bg,alpha:true});
+renderer.setSize(innerWidth,innerHeight);
+renderer.setPixelRatio(devicePixelRatio);
+camera.position.z=50;
+
+/* Starfield */
+const starsGeo=new THREE.BufferGeometry();
+const starCount=6000;
+const starPos=[];
+for(let i=0;i<starCount;i++){
+  starPos.push((Math.random()-.5)*2000,(Math.random()-.5)*2000,-Math.random()*2000);
+}
+starsGeo.setAttribute('position',new THREE.Float32BufferAttribute(starPos,3));
+const stars=new THREE.Points(starsGeo,new THREE.PointsMaterial({color:0xffffff,size:1}));
+scene.add(stars);
+
+/* Shapes */
+const shapes=[];
+const geos=[
+ new THREE.TorusKnotGeometry(10,3,300,32),
+ new THREE.IcosahedronGeometry(9),
+ new THREE.DodecahedronGeometry(8),
+ new THREE.SphereGeometry(7,32,32)
+];
+geos.forEach((g,i)=>{
+ const m=new THREE.MeshStandardMaterial({
+   color:[0x00f2fe,0x43e97b,0xff4ecd,0xffc371][i],
+   metalness:.8,roughness:.2
+ });
+ const mesh=new THREE.Mesh(g,m);
+ mesh.position.y=i*25;
+ scene.add(mesh);
+ shapes.push(mesh);
+});
+
+/* Lights */
+scene.add(new THREE.AmbientLight(0xffffff,.6));
+const pl=new THREE.PointLight(0xffffff,1.4);
+pl.position.set(30,40,30);
+scene.add(pl);
+
+/* Scroll */
+gsap.registerPlugin(ScrollTrigger);
+gsap.to(camera.position,{
+ z:18,
+ scrollTrigger:{start:"top top",end:"bottom bottom",scrub:1}
+});
+shapes.forEach((s,i)=>{
+ gsap.to(s.rotation,{
+  x:Math.PI*2,y:Math.PI*2,
+  scrollTrigger:{trigger:`section:nth-of-type(${i+1})`,scrub:1}
+ });
+});
+
+/* WASD */
+const keys={};
+window.addEventListener("keydown",e=>keys[e.key]=true);
+window.addEventListener("keyup",e=>keys[e.key]=false);
+
+function animate(){
+ requestAnimationFrame(animate);
+ if(keys.w) camera.position.z-=0.8;
+ if(keys.s) camera.position.z+=0.8;
+ if(keys.a) camera.position.x-=0.8;
+ if(keys.d) camera.position.x+=0.8;
+ stars.rotation.y+=0.0005;
+ shapes.forEach(s=>s.rotation.z+=0.002);
+ renderer.render(scene,camera);
+}
+animate();
+
+window.addEventListener('resize',()=>{
+ camera.aspect=innerWidth/innerHeight;
+ camera.updateProjectionMatrix();
+ renderer.setSize(innerWidth,innerHeight);
+});
+</script>
+
+</body>
+</html>
